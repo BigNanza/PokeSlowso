@@ -13046,6 +13046,7 @@ searchButton.addEventListener('click', () => {
                 imageArray[buttonID.slice(-1)-1].src = data[input][5];
                 imageArray[buttonID.slice(-1)-1].style.display = 'block';
                 var optimal = returnOptimals(cats);
+                if (data[optimal][4] != data[input][4]) {alert("Optimal: " + optimal);}
                 var percent = 1 / (data[input][4] * 1.0 / data[optimal][4]);
                 pArray[buttonID.slice(-1)-1].textContent = ((percent * 100).toFixed(1) + "%")
                 pArray[buttonID.slice(-1)-1].style.display = 'block';
